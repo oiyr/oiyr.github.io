@@ -1,6 +1,6 @@
 if game.PlaceId == 155615604 then
 local Config = {
-    WindowName = "oiyr | oiyr.github.io",
+    WindowName = "oiyr.github.io | Prison Life",
 	Color = Color3.fromRGB(126,161,92),
 	Keybind = Enum.KeyCode.H
 }
@@ -103,7 +103,7 @@ local Button1 = Section1:CreateButton("Kill All", function()
 			Kill(v)
 		end
 	end
-    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer('[oiyr07 GUI]: Killed All', "all")
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer('[oiyr]: Killed All', "all")
 end)
 
 local Toggles = Section1:CreateToggle("Loop Kill All", false, function(State)
@@ -112,13 +112,13 @@ end)
 
 local Button2 = Section1:CreateButton("Give All Guns", function()
 	if game:GetService("MarketplaceService"):UserOwnsGamePassAsync(tonumber((game:GetService("Players").LocalPlayer.CharacterAppearance):split('=')[#((game:GetService("Players").LocalPlayer.CharacterAppearance):split('='))]), 96651) then
-		game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer('[oiyr07 GUI]: Gived gamepass Guns', 'all')
+		game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer('[oiyr]: Gived gamepass Guns', 'all')
 		workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["Remington 870"].ITEMPICKUP)
 		workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["M4A1"].ITEMPICKUP)
 		workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["AK-47"].ITEMPICKUP)
 		workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["M9"].ITEMPICKUP)
 	else
-		game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer('[oiyr07 GUI]: Gived non-gamepass Guns', 'all')
+		game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer('[oiyr]: Gived non-gamepass Guns', 'all')
 		workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["Remington 870"].ITEMPICKUP)
 		workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["AK-47"].ITEMPICKUP)
 		workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["M9"].ITEMPICKUP)
@@ -127,27 +127,27 @@ end)
 
 local TextBox1 = Section2:CreateTextBox("WalkSpeed", "WS", true, function(Value)
 	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
-    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer('[oiyr07 GUI]: Walkspeed: '..Value, "all")
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer('[oiyr]: Walkspeed: '..Value, "all")
 end)
 
 local TextBox2 = Section2:CreateTextBox("JumpPower", "JP", true, function(Value)
 	game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
-    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer('[oiyr07 GUI]: Jumppower: '..Value, "all")
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer('[oiyr]: Jumppower: '..Value, "all")
 end)
 
 local Button3 = Section3:CreateButton("Team Neutral", function()
     Workspace.Remote.TeamEvent:FireServer("Medium stone grey")
-    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer('[oiyr07 GUI]: Changes to team neutral', "all")
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer('[oiyr]: Changes to team neutral', "all")
 end)
 
 local Button4 = Section3:CreateButton("Team Inmate", function()
     Workspace.Remote.TeamEvent:FireServer("Bright orange")
-    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer('[oiyr07 GUI]: Changes to team inmate', "all")
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer('[oiyr]: Changes to team inmate', "all")
 end)
 
 local Button5 = Section3:CreateButton("Team Police", function()
     Workspace.Remote.TeamEvent:FireServer("Bright blue")
-    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer('[oiyr07 GUI]: Changes to team police', "all")
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer('[oiyr]: Changes to team police', "all")
 end)
 
 local Button6 = Section1:CreateButton("Arrest Criminals", function()
@@ -165,7 +165,7 @@ local Button6 = Section1:CreateButton("Arrest Criminals", function()
     end
     end
     Player.Character.HumanoidRootPart.CFrame = cpos
-    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer('[oiyr07 GUI]: Arrested All Criminals', "all")
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer('[oiyr]: Arrested All Criminals', "all")
 end)
 
 local TextBox23 = Section1:CreateTextBox("Arrest Player", "Enter UserName", false, function(Value)
@@ -193,9 +193,9 @@ local TextBox23 = Section1:CreateTextBox("Arrest Player", "Enter UserName", fals
     local z = GetPlayer(Value)
     if z ~= nil then
         Arrest(z)
-        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[oiyr07 GUI]: Arrested "..Player.Name, "all")
+        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[oiyr]: Arrested "..Player.Name, "all")
     else
-        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[oiyr07 GUI]: No player found", "all")
+        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[oiyr]: No player found", "all")
     end
 end)
 
@@ -297,9 +297,9 @@ local TextBox3 = Section1:CreateTextBox("Kill Player", "Enter UserName", false, 
     local Player = GetPlayer(Value)
     if Player ~= nil then
         Kill(Player)
-        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[oiyr07 GUI]: Killed "..Player.Name, "all")
+        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[oiyr]: Killed "..Player.Name, "all")
     else
-        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[oiyr07 GUI]: No player found", "all")
+        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[oiyr]: No player found", "all")
     end
 end)
 
