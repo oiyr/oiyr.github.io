@@ -1,6 +1,6 @@
 if game.PlaceId == 155615604 then
 local Config = {
-    WindowName = "oiyr07",
+    WindowName = "oiyr | oiyr.github.io",
 	Color = Color3.fromRGB(126,161,92),
 	Keybind = Enum.KeyCode.H
 }
