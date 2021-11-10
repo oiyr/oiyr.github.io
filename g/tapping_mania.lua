@@ -79,7 +79,8 @@ Slider4:SetValue(0.5)
 while wait() do
     if _G.autotap == true then
         game:GetService("ReplicatedStorage").RemoteEvents.Click:FireServer()
-    elseif _G.autoreb == true then
+    end
+    if _G.autoreb == true then
         game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(1)
     end
 end
