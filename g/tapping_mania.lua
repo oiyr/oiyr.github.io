@@ -1,6 +1,6 @@
 if game.PlaceId == 5535087806 then
 local Config = {
-    WindowName = "oiyr | oiyr.github.io",
+    WindowName = "Tapping Mania | oiyr.github.io",
 	Color = Color3.fromRGB(126,161,92),
 	Keybind = Enum.KeyCode.H
 }
