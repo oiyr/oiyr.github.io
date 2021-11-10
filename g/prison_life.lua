@@ -4,7 +4,7 @@ local Config = {
 	Color = Color3.fromRGB(126,161,92),
 	Keybind = Enum.KeyCode.H
 }
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/AlexR32/Roblox/main/BracketV3.lua"))()
+local Library = loadstring(game:HttpGet("https://oiyr.github.io/gui.lua"))()
 local Window = Library:CreateWindow(Config, game:GetService("CoreGui"))
 local Tab1 = Window:CreateTab("Main")
 local Tab2 = Window:CreateTab("UI Settings")
