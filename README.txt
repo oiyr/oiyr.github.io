@@ -3,7 +3,7 @@ oiyr script
 
 games supported:
 prison life (id: 155615604)
-new games comming soon
+tapping mania (id: 5535087806)
 ]]
 
 --the script:
