@@ -11,6 +11,11 @@ local Tab2 = Window:CreateTab("UI Settings")
 local Section1 = Tab1:CreateSection("Misc")
 local Section2 = Tab2:CreateSection("Menu")
 local Section3 = Tab2:CreateSection("Background")
+local web = Window:CreateTab("Credits")
+local Section4 = web:CreateSection(" ")
+Section4:CreateLabel("scripter: oiyr")
+Section4:CreateLabel("lib: AlexR32")
+Section4:CreateLabel("Web: oiyr.github.io")
 
 _G.autotap=false
 _G.autoreb=false
