@@ -1,6 +1,6 @@
 if game.PlaceId == 155615604 then
 local Config = {
-    WindowName = "oiyr.github.io | Prison Life",
+    WindowName = "oiyr | Prison Life",
 	Color = Color3.fromRGB(126,161,92),
 	Keybind = Enum.KeyCode.H
 }
@@ -14,6 +14,11 @@ local Section3 = Tab1:CreateSection("Team")
 local Section4 = Tab2:CreateSection("Menu")
 local Section5 = Tab2:CreateSection("Background")
 local Section6 = Tab1:CreateSection("Spam")
+local web = Window:CreateTab("Credits")
+local Section7 = Tab1:CreateSection(" ")
+Section7:CreateLabel("scripter: oiyr")
+Section7:CreateLabel("lib: AlexR32")
+Section7:CreateLabel("Web: oiyr.github.io")
 
 _G.loopkillall = false
 
