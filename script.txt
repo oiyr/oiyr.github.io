@@ -6,7 +6,5 @@ features: oiyr.github.io/features.htm
 made by: oiyr
 ]]--
 
-_G.key = "" -- 
-
 --the script:
 loadstring(game:HttpGet('https://oiyr.github.io/main.lua'))();
